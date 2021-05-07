@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="tailwindcss.css">
+        <script src="app.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <title>todo list task</title>
+    </head>
+    <body>
+        <div id="app" v-on:click="done()" class="m-10">
+            <div class="flex w-1/2 items-center">
+                <input id="input" class="m-10 w-80 border-2 border-blue-500" placeholder="to-do">
+                <button class="w-44 h-10 bg-blue-700 rounded text-white" v-on:click="addtodo()">Add</button>
+            </div>
+            <div class="flex w-1/2 flex-wrap">
+                <div v-for="item in list">
+                    <div class="mr-16 mb-5">
+                        <div  id="box" class="w-10 h-10 border-2 border-blue-500 cursor-pointer "></div>
+                        <span>{{item}}<span>
+                    </div>
+                <div>
+            </div>
+        </div>
+    </body>
+</html>
